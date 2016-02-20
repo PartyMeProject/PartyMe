@@ -7,10 +7,15 @@
 button {
     font-size: 42;
     horizontal-align: center;
+
 }
 
 .message {
     font-size: 20;
     color: #284848;
     horizontal-align: center;
+}
+
+Page{
+    background-image: url("~/images/4tBGu8D.jpg");
 }
