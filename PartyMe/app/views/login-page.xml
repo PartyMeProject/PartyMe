@@ -1,13 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
     <StackLayout>
-        <Label text="Tap the button" class="title"/>
-        <Button text="TAP" tap="{{ tapAction }}" />
-        <Label text="{{ message }}" class="message" textWrap="true"/>
+        <Label text="User Administration" class="title"/>
 
         <TextField hint="Username" id="username" text="{{ username }}" autocorrect="false" autocapitalizationType="none" />
         <TextField hint="Password" id="password" text="{{ password }}" secure="true" />
 
-        <Button text="Sign in" />
+        <Button text="Sign in" tap="{{ login }}" />
         <Button text="Register" tap="{{ register }}" />
     </StackLayout>
 </Page>

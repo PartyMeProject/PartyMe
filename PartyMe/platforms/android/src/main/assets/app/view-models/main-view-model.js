@@ -1,4 +1,17 @@
 var observable = require("data/observable");
+var frameModule = require("ui/frame");
+var topmost;
+var telerikBeckend = require("~/common/telerik-backend");
+var Everlive = require('~/everlive.all.min');
+var el = new Everlive({
+    appId: telerikBeckend.ApiId,
+    scheme: "https",
+    authentication: {
+        persist: true
+    }
+});
+
+
 var HelloWorldModel = (function (_super) {
     __extends(HelloWorldModel, _super);
     function HelloWorldModel() {
@@ -7,13 +20,17 @@ var HelloWorldModel = (function (_super) {
         this.set("message", this.counter + " taps left");
     }
     HelloWorldModel.prototype.tapAction = function () {
-        this.counter--;
-        if (this.counter <= 0) {
-            this.set("message", "Hoorraaay! You unlocked the NativeScript clicker achievement!");
-        }
-        else {
-            this.set("message", this.counter + " taps left");
-        }
+        topmost = frameModule.topmost();
+        el.Users.currentUser(function(data) {
+            console.log(data.result);
+            if (data.result) {
+                topmost.navigate("./views/start-page")
+            } else {
+                topmost.navigate("./views/login-page")
+            }
+        }, function(err) {
+            alert(err.message + " Please log in.");
+        });
     };
     return HelloWorldModel;
 })(observable.Observable);

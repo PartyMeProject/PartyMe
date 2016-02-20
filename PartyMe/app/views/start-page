@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+    <StackLayout>
+        <Label text="Tap the button" class="title"/>
+
+    </StackLayout>
+</Page>
