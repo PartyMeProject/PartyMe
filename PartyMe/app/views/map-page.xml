@@ -2,12 +2,17 @@
 <Page
         xmlns="http://www.nativescript.org/tns.xsd"
         xmlns:maps="nativescript-google-maps-sdk"
+        loaded="pageLoaded"
         >
     <GridLayout>
-        <maps:mapView latitude="{{ latitude }}" longitude="{{ longitude }}"
-                      zoom="{{ zoom }}" bearing="{{ bearing }}"
-                      tilt="{{ tilt }}" mapReady="onMapReady"
+        <maps:mapView latitude="{{ latitude }}"
+                      longitude="{{ longitude }}"
+                      zoom="{{ zoom }}"
+                      bearing="{{ bearing }}"
+                      tilt="{{ tilt }}"
+                      mapReady="onMapReady"
+                      coordinateTapped="onCoordinateTapped"
                       markerSelect="onMarkerSelect"
-                      cameraChanged="onCameraChanged" />
+                      cameraChanged="onCameraChanged"/>
     </GridLayout>
 </Page>

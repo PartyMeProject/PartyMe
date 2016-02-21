@@ -1,0 +1,65 @@
+{
+  "name": "nativescript-dom",
+  "version": "1.0.0",
+  "description": "A NativeScript module for DOM Emulation",
+  "main": "dom.js",
+  "nativescript": {
+    "platforms": {
+      "android": "1.0.0",
+      "ios": "1.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanaela/nativescript-dom.git"
+  },
+  "keywords": [
+    "NativeScript",
+    "dom",
+    "development",
+    "classList",
+    "getElementById",
+    "getElementsByTagName",
+    "getElementsByClassName"
+  ],
+  "author": {
+    "name": "Nathanael Anderson",
+    "email": "nathan@master-technology.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/nathanaela/nativescript-dom/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/nathanaela/nativescript-dom/issues"
+  },
+  "homepage": "https://github.com/nathanaela/nativescript-dom",
+  "gitHead": "7a604302857534c2a85d488b0bd1532109178d04",
+  "_id": "nativescript-dom@1.0.0",
+  "scripts": {},
+  "_shasum": "fb4b3642e1e0d93771aaaaf749ffc497b8053ff1",
+  "_from": "nativescript-dom@latest",
+  "_npmVersion": "2.8.3",
+  "_nodeVersion": "4.2.1",
+  "_npmUser": {
+    "name": "nathanaela",
+    "email": "nathan@master-technology.com"
+  },
+  "dist": {
+    "shasum": "fb4b3642e1e0d93771aaaaf749ffc497b8053ff1",
+    "tarball": "http://registry.npmjs.org/nativescript-dom/-/nativescript-dom-1.0.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "nathanaela",
+      "email": "nathan@master-technology.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-6-west.internal.npmjs.com",
+    "tmp": "tmp/nativescript-dom-1.0.0.tgz_1455767140775_0.44284465978853405"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/nativescript-dom/-/nativescript-dom-1.0.0.tgz",
+  "readme": "ERROR: No README data found!"
+}
