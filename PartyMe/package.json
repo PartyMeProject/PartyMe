@@ -1,11 +1,12 @@
 {
-	"nativescript": {
-		"id": "org.nativescript.PartyMe",
-		"tns-android": {
-			"version": "1.6.1"
-		}
-	},
-	"dependencies": {
-		"tns-core-modules": "1.6.0"
-	}
+  "nativescript": {
+    "id": "org.nativescript.PartyMe",
+    "tns-android": {
+      "version": "1.6.1"
+    }
+  },
+  "dependencies": {
+    "nativescript-google-maps-sdk": "^1.2.2",
+    "tns-core-modules": "1.6.0"
+  }
 }
