@@ -1,3 +1,3 @@
 android { 
-	flavorDimensions "nativescriptcalendar"
+	flavorDimensions "nativescriptcalendar","nativescriptgooglemapssdk","nativescriptgooglesdk"
 }
