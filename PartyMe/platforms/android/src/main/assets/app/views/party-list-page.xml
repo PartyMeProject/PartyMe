@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <StackLayout>
+        <ActivityIndicator busy="{{ isLoading }}" verticalAlignment="center" horizontalAlignment="center"/>
+        <ListView id="partiesList" items="{{ parties }}" >
+            <ListView.itemTemplate>
+                <GridLayout rows="1*, 1*" cssClass="big">
+                    <Label row="0" text="{{ $value.Name }}" />
+                    <Label id="id" visibility="collapsed" row="1" text="{{ $value.Id }}" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>

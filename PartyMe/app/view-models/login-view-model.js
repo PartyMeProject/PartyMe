@@ -1,7 +1,7 @@
 var observable = require("data/observable");
 var LoginModel = new observable.Observable();
 var frameModule = require("ui/frame");
-var topmost = frameModule.topmost();;
+var topmost = frameModule.topmost();
 var telerikBeckend = require("~/common/telerik-backend");
 var Everlive = require('~/everlive.all.min');
 var el = new Everlive({

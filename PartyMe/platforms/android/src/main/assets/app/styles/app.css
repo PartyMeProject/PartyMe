@@ -16,6 +16,10 @@ button {
     horizontal-align: center;
 }
 
-Page{
-    background-image: url("~/images/4tBGu8D.jpg");
+/*Page{*/
+    /*background-image: url("~/images/4tBGu8D.jpg");*/
+/*}*/
+
+.big {
+    font-size: 30px;
 }
