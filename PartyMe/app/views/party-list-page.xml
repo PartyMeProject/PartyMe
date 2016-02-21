@@ -1,4 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <ActionBar title="Party Map" class="actionBar">
+        <ActionBar.titleView>
+            <StackLayout orientation="horizontal">
+                <Button text="Add Party"  tap="{{ addParty }}" />
+            </StackLayout>
+        </ActionBar.titleView>
+    </ActionBar>
     <StackLayout>
         <ActivityIndicator busy="{{ isLoading }}" verticalAlignment="center" horizontalAlignment="center"/>
         <ListView id="partiesList" items="{{ parties }}" >

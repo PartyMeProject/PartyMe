@@ -24,7 +24,7 @@ var HelloWorldModel = (function (_super) {
         el.Users.currentUser(function(data) {
             console.log(data.result);
             if (data.result) {
-                topmost.navigate("./views/add-party-page")
+                topmost.navigate("./views/party-list-page")
             } else {
                 topmost.navigate("./views/login-page")
             }

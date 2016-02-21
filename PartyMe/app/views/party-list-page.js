@@ -14,7 +14,6 @@ function pageLoaded(args) {
             uiframe.reloadPage();
         }, 2000);
     }
-
     view.getViewById(page, 'partiesList').on("itemTap", function (args) {
         var item = view.getViewById(args.view, 'id');
         if(item){

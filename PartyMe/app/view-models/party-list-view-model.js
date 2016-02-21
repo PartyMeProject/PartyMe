@@ -2,7 +2,6 @@ var observable = require("data/observable");
 var observable_array_1 = require("data/observable-array");
 var PartyListModel = new observable.Observable();
 var frameModule = require("ui/frame");
-var topmost;
 var telerikBeckend = require("~/common/telerik-backend");
 var listViewModule = require("ui/list-view");
 var Everlive = require('~/everlive.all.min');
@@ -13,7 +12,9 @@ var el = new Everlive({
         persist: true
     }
 });
-
+PartyListModel.addParty = function(){
+    frameModule.topmost().navigate("./views/add-party-page")
+};
 var data = el.data('Party');
 var query = new Everlive.Query();
 query.order('Name');
