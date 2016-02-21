@@ -4,6 +4,15 @@
         xmlns:maps="nativescript-google-maps-sdk"
         loaded="pageLoaded"
         >
+    <Page.actionBar>
+        <ActionBar title="Party Map">
+            <ActionBar.titleView>
+                <StackLayout orientation="horizontal">
+                    <Button text="Continue"  tap="addLocation" />
+                </StackLayout>
+            </ActionBar.titleView>
+        </ActionBar>
+    </Page.actionBar>
     <GridLayout>
         <maps:mapView latitude="{{ latitude }}"
                       longitude="{{ longitude }}"

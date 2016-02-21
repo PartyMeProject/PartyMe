@@ -1,4 +1,13 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+    <Page.actionBar>
+        <ActionBar title="Party Map" class="actionBar">
+            <ActionBar.titleView>
+                <StackLayout orientation="horizontal">
+                    <Button text="Add Party Location"  tap="{{ addPartyLocation }}" />
+                </StackLayout>
+            </ActionBar.titleView>
+        </ActionBar>
+    </Page.actionBar>
     <StackLayout>
         <Label text="Add Party" class="title"/>
 
