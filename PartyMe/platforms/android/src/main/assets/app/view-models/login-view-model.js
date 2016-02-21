@@ -36,7 +36,7 @@ LoginModel.login = function(){
 
         alert("Successfully logged the user in!");
         console.log("here");
-        topmost.navigate("./views/main-page");
+        topmost.navigate("./views/party-list-page");
     }, function(err) {
         alert("Unfortunately an error occurred: " + err.message);
     });
