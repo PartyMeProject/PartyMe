@@ -1,11 +1,8 @@
 ﻿.title {
-    font-size: 30;
     horizontal-align: center;
-    margin: 20;
 }
 
 button {
-    font-size: 42;
     horizontal-align: center;
 
 }
@@ -17,5 +14,10 @@ button {
 }
 
 Page{
-    background-image: url("~/images/4tBGu8D.jpg");
+    background-color: white;
+}
+ActionBar {
+    background-color: #afd9ee;
+    color: black;
+    height: 40;
 }

@@ -1,3 +1,3 @@
 var application = require("application");
 application.cssFile = "styles/app.css";
-application.start({ moduleName: "views/map-page" });
+application.start({ moduleName: "views/add-party-page" });

@@ -1,5 +1,8 @@
 var mapsModule = require("nativescript-google-maps-sdk");
 var geolocation = require("nativescript-geolocation");
+var frameModule = require("ui/frame");
+var actionBarModule = require("ui/action-bar");
+var topmost;
 var camera;
 var mapView;
 var myLatitude;
@@ -25,8 +28,6 @@ function onMapReady(args) {
         }, function(e){
             console.log("Error: " + e.message);
         });
-
-
 }
 
 function onMarkerSelect(args) {
@@ -43,8 +44,15 @@ function onCoordinateTapped(args){
 }
 
 function pageLoaded(args) {
+    topmost = frameModule.topmost();
 
 }
+function addLocation(eventData) {
+    console.log(myLatitude);
+    console.log(myLongitude);
+    topmost.goBack();
+}
+exports.addLocation = addLocation;
 exports.pageLoaded = pageLoaded;
 exports.onMapReady = onMapReady;
 exports.onMarkerSelect = onMarkerSelect;

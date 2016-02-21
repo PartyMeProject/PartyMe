@@ -1,7 +1,6 @@
 var observable = require("data/observable");
 var AddPartyModel = new observable.Observable();
 var frameModule = require("ui/frame");
-var topmost = frameModule.topmost();
 var telerikBeckend = require("~/common/telerik-backend");
 var Everlive = require('~/everlive.all.min');
 var el = new Everlive({
@@ -11,6 +10,10 @@ var el = new Everlive({
         persist: true
     }
 });
+
+AddPartyModel.addPartyLocation = function(){
+    frameModule.topmost().navigate("./views/map-page")
+};
 
 AddPartyModel.add = function () {
 
