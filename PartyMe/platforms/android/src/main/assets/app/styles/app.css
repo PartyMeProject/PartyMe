@@ -13,14 +13,13 @@ button {
     horizontal-align: center;
 }
 
-<<<<<<< HEAD
 /*Page{*/
     /*background-image: url("~/images/4tBGu8D.jpg");*/
 /*}*/
 
 .big {
     font-size: 30px;
-=======
+}
 Page{
     background-color: white;
 }
@@ -28,5 +27,4 @@ ActionBar {
     background-color: #afd9ee;
     color: black;
     height: 40;
->>>>>>> origin/master
 }
