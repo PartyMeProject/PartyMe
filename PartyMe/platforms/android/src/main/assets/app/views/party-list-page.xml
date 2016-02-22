@@ -3,6 +3,7 @@
         <ActionBar.titleView>
             <StackLayout orientation="horizontal">
                 <Button text="Add Party"  tap="{{ addParty }}" />
+                <Button text="My Parties"  tap="{{ myParties }}" />
             </StackLayout>
         </ActionBar.titleView>
     </ActionBar>

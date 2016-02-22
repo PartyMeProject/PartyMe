@@ -15,6 +15,9 @@ var el = new Everlive({
 PartyListModel.addParty = function(){
     frameModule.topmost().navigate("./views/add-party-page")
 };
+PartyListModel.myParties = function(){
+    frameModule.topmost().navigate("./views/my-parties-page")
+};
 var data = el.data('Party');
 var query = new Everlive.Query();
 query.order('Name');

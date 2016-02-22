@@ -3,6 +3,7 @@ var AddPartyModel = new observable.Observable();
 var frameModule = require("ui/frame");
 var telerikBeckend = require("~/common/telerik-backend");
 var Everlive = require('~/everlive.all.min');
+var partyService = require("~/services/party-services");
 
 var textFieldModule = require("ui/text-field");
 var el = new Everlive({
@@ -30,11 +31,10 @@ AddPartyModel.add = function () {
     var userId;
     el.Users.currentUser(function(data) {
         userId = data.result.Id;
-        console.log(userId);
+        partyService.Parties.addParty(userId, name);
     }, function(err) {
         alert(err.message + " Please log in.");
     });
-
     var data = el.data('Party');
     data.create({
             'Name' : name,
@@ -52,5 +52,6 @@ AddPartyModel.add = function () {
             alert(JSON.stringify(error));
             console.dir(error);
         });
+
 };
 exports.addPartyViewModel = AddPartyModel;
