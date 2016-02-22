@@ -18,6 +18,7 @@ function pageLoaded(args) {
         var item = view.getViewById(args.view, 'id');
         if(item){
             vmModule.partyListModel.getPartyById(item.text, function(data){
+                uiframe.topmost().transition = { name: "flip" };
                 uiframe.topmost().navigate({
                     moduleName: "views/party-details-page",
                     context: {party: data}

@@ -2,6 +2,7 @@ var mapsModule = require("nativescript-google-maps-sdk");
 var geolocation = require("nativescript-geolocation");
 var frameModule = require("ui/frame");
 var actionBarModule = require("ui/action-bar");
+var globalConstants = require("~/common/global-constants");
 var topmost;
 var camera;
 var mapView;
@@ -10,7 +11,7 @@ var myLongitude;
 
 function onMapReady(args) {
 
-    var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000}).
+    var location = geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10}).
         then(function(loc) {
             if (loc) {
                 myLatitude = loc.longitude;
@@ -48,8 +49,12 @@ function pageLoaded(args) {
 
 }
 function addLocation(eventData) {
-    console.log(myLatitude);
-    console.log(myLongitude);
+
+   globalConstants.Latitude = myLatitude;
+   globalConstants.Longitude = myLongitude;
+
+    console.log(globalConstants.Latitude);
+    console.log(globalConstants.Longitude);
     topmost.goBack();
 }
 exports.addLocation = addLocation;

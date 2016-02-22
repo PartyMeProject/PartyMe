@@ -3,6 +3,8 @@ var AddPartyModel = new observable.Observable();
 var frameModule = require("ui/frame");
 var telerikBeckend = require("~/common/telerik-backend");
 var Everlive = require('~/everlive.all.min');
+
+var textFieldModule = require("ui/text-field");
 var el = new Everlive({
     appId: telerikBeckend.ApiId,
     scheme: "https",
@@ -10,6 +12,8 @@ var el = new Everlive({
         persist: true
     }
 });
+var location = new textFieldModule.TextField();
+location.text = "ghghgh";
 
 AddPartyModel.addPartyLocation = function(){
     frameModule.topmost().navigate("./views/map-page")
@@ -19,8 +23,9 @@ AddPartyModel.add = function () {
 
     var name = AddPartyModel.get("name");
     var description = AddPartyModel.get("description");
-    var latitude = AddPartyModel.get("latitude");
-    var longitude = AddPartyModel.get("longitude");
+
+    latitude = AddPartyModel.get("latitude");
+    longitude = AddPartyModel.get("longitude");
 
     var userId;
     el.Users.currentUser(function(data) {

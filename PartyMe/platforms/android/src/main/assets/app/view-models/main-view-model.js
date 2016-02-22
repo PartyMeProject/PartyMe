@@ -24,8 +24,10 @@ var HelloWorldModel = (function (_super) {
         el.Users.currentUser(function(data) {
             console.log(data.result);
             if (data.result) {
+                topmost.transition = { name: "flip" };
                 topmost.navigate("./views/party-list-page")
             } else {
+                topmost.transition = { name: "flip" };
                 topmost.navigate("./views/login-page")
             }
         }, function(err) {

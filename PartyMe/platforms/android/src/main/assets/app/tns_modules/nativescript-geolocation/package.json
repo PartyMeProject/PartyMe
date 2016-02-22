@@ -1,56 +1,38 @@
 {
-  "_args": [
-    [
-      "nativescript-geolocation@0.0.8",
-      "D:\\Telerik Academy Courses\\NativeScript\\Project\\PartyMe\\PartyMe"
-    ]
+  "name": "nativescript-geolocation",
+  "version": "0.0.8",
+  "description": "Provides API for getting and monitoring location for NativeScript app.",
+  "main": "nativescript-geolocation.js",
+  "nativescript": {
+    "platforms": {
+      "android": "1.4.0",
+      "ios": "1.4.0"
+    }
+  },
+  "keywords": [
+    "NativeScript",
+    "location",
+    "geolocation"
   ],
-  "_from": "nativescript-geolocation@0.0.8",
+  "author": {
+    "name": "Nedyalko Nikolov",
+    "email": "nedyalko.nikolov@telerik.com"
+  },
   "_id": "nativescript-geolocation@0.0.8",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/nativescript-geolocation",
+  "_shasum": "d7057a8e497cbd4d04db335f2f9070afc931c611",
+  "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-0.0.8.tgz",
+  "_from": "nativescript-geolocation@latest",
+  "scripts": {},
+  "_npmVersion": "2.14.7",
   "_nodeVersion": "4.2.2",
   "_npmUser": {
-    "email": "hristo@deshev.com",
-    "name": "hdeshev"
+    "name": "hdeshev",
+    "email": "hristo@deshev.com"
   },
-  "_npmVersion": "2.14.7",
-  "_phantomChildren": {},
-  "_requested": {
-    "name": "nativescript-geolocation",
-    "raw": "nativescript-geolocation@0.0.8",
-    "rawSpec": "0.0.8",
-    "scope": null,
-    "spec": "0.0.8",
-    "type": "version"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-0.0.8.tgz",
-  "_shasum": "d7057a8e497cbd4d04db335f2f9070afc931c611",
-  "_shrinkwrap": null,
-  "_spec": "nativescript-geolocation@0.0.8",
-  "_where": "D:\\Telerik Academy Courses\\NativeScript\\Project\\PartyMe\\PartyMe",
-  "author": {
-    "email": "nedyalko.nikolov@telerik.com",
-    "name": "Nedyalko Nikolov"
-  },
-  "dependencies": {},
-  "description": "Provides API for getting and monitoring location for NativeScript app.",
-  "devDependencies": {},
-  "directories": {},
   "dist": {
     "shasum": "d7057a8e497cbd4d04db335f2f9070afc931c611",
     "tarball": "http://registry.npmjs.org/nativescript-geolocation/-/nativescript-geolocation-0.0.8.tgz"
   },
-  "keywords": [
-    "NativeScript",
-    "geolocation",
-    "location"
-  ],
-  "main": "nativescript-geolocation.js",
   "maintainers": [
     {
       "name": "hdeshev",
@@ -61,15 +43,6 @@
       "email": "nedyalko.nikolov@telerik.com"
     }
   ],
-  "name": "nativescript-geolocation",
-  "nativescript": {
-    "platforms": {
-      "android": "1.4.0",
-      "ios": "1.4.0"
-    }
-  },
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "scripts": {},
-  "version": "0.0.8"
+  "directories": {},
+  "readme": "ERROR: No README data found!"
 }
