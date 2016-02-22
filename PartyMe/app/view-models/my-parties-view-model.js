@@ -5,6 +5,7 @@ var partyService = require("~/services/party-services");
 var Everlive = require('~/everlive.all.min');
 var telerikBeckend = require("~/common/telerik-backend");
 
+
 var el = new Everlive({
     appId: telerikBeckend.ApiId,
     scheme: "https",

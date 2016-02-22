@@ -4,6 +4,7 @@ var dialogs = require("ui/dialogs");
 var Calendar = require("nativescript-calendar");
 
 PartyDetailsModel.eventIt = function(name, location, date){
+    console.log(date);
     date.setHours(0);
     date.setMinutes(0);
     date.setSeconds(0);

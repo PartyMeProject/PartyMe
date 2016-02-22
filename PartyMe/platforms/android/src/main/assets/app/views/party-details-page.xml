@@ -1,6 +1,27 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigated="">
+<Page  xmlns="http://schemas.nativescript.org/tns.xsd"
+        xmlns:maps="nativescript-google-maps-sdk"
+      loaded="pageLoaded"
+      navigated="">
+    <ActionBar title="Party Map" class="actionBar">
+        <ActionBar.titleView>
+            <StackLayout orientation="horizontal" loaded="stackLoaded">
+                <Button text="Share"  tap="screenshot" />
+            </StackLayout>
+        </ActionBar.titleView>
+    </ActionBar>
     <StackLayout>
-        <Label text="{{ Name }}"  />
+        <Label class="title-share" text="{{ Name }}"  />
+        <Label class="description-share" text="{{ Description }}"  />
+        <GridLayout class="map-share">
+            <maps:mapView latitude="{{ latitude }}"
+                          longitude="{{ longitude }}"
+                          zoom="{{ zoom }}"
+                          bearing="{{ bearing }}"
+                          tilt="{{ tilt }}"
+                          mapReady="onMapReady"
+                          markerSelect="onMarkerSelect"
+                          cameraChanged="onCameraChanged"/>
+        </GridLayout>
         <Button id="attend" text="Attent" />
     </StackLayout>
 </Page>

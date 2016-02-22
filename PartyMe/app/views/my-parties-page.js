@@ -18,9 +18,6 @@ function pageLoaded(args) {
 }
 exports.pageLoaded = pageLoaded;
 exports.delete = function(args) {
-    console.log('here');
-
     var item = args.view.bindingContext;
-    console.dir(item);
     vmModule.partyListModel.delete(item);
 };

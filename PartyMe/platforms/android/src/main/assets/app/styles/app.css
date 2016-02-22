@@ -1,5 +1,6 @@
 ﻿.title {
     horizontal-align: center;
+
 }
 
 button {
@@ -19,9 +20,10 @@ button {
 
 .big {
     font-size: 30px;
+    horizontal-align: center;
 }
 Page{
-    background-color: white;
+    background-image: url("~/images/background.jpg");
 }
 ActionBar {
     background-color: #afd9ee;
@@ -30,4 +32,26 @@ ActionBar {
 }
 .delete{
     height: 30;
+}
+.title-share {
+    horizontal-align: center;
+    font-size: 30px;
+}
+.description-share {
+    padding: 10px;
+    font-size: 20px;
+}
+.map-share {
+    horizontal-align: center;
+    width: 300px;
+    height: 400px;
+}
+.index-page-image{
+    margin: 30px;
+}
+.index-page-button{
+    horizontal-align: center;
+    background-image: url("~/images/button.png");
+    width: 150px;
+    height: 150px;
 }

@@ -10,6 +10,8 @@
     "nativescript-dom": "^1.0.0",
     "nativescript-geolocation": "0.0.8",
     "nativescript-google-maps-sdk": "^1.2.2",
+    "nativescript-screenshot": "0.0.2",
+    "nativescript-social-share": "^1.1.2",
     "nativescript-sqlite": "^1.0.8",
     "tns-core-modules": "1.6.0"
   }

@@ -53,8 +53,6 @@ function addLocation(eventData) {
    globalConstants.Latitude = myLatitude;
    globalConstants.Longitude = myLongitude;
 
-    console.log(globalConstants.Latitude);
-    console.log(globalConstants.Longitude);
     topmost.goBack();
 }
 exports.addLocation = addLocation;

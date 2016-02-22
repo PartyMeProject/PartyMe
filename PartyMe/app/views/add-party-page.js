@@ -1,6 +1,5 @@
 var vmModule = require("./../view-models/add-party-view-model");
 var globalConstants = require("~/common/global-constants");
-var datePickerModule = require("ui/date-picker");
 
 function pageLoaded(args) {
     var page = args.object;

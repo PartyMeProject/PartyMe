@@ -1,7 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
   <StackLayout>
-    <Label text="Tap the button" class="title"/>
-    <Button text="TAP" tap="{{ tapAction }}" />
-    <Label text="{{ message }}" class="message" textWrap="true"/>
+    <Image src="~/images/party.gif" class="index-page-image"/>
+    <Button tap="{{ tapAction }}" class="index-page-button" />
   </StackLayout>
 </Page>
