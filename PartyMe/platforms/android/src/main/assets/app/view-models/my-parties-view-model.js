@@ -12,11 +12,38 @@ var el = new Everlive({
         persist: true
     }
 });
+
 PartyListModel.addParty = function(){
     frameModule.topmost().navigate("./views/add-party-page")
 };
+
 PartyListModel.allParties = function(){
     frameModule.topmost().navigate("./views/party-list-page")
+};
+PartyListModel.delete = function(item) {
+    partyService.Parties.deleteDataFromTable(item.Name);
+    alert(item.Name + "deleted");
+
+    var filter = new Everlive.Query();
+    filter.where().eq('Name', item.Name);
+
+    var dataItem = el.data('Party');
+    dataItem.get(filter)
+        .then(function(data){
+           dataItem.destroySingle({ Id: data.result[0].Id},
+                function(){
+
+                },
+                function(error){
+                    alert(JSON.stringify(error));
+                });
+        },
+        function(error){
+            alert(JSON.stringify(error));
+        });
+
+
+    frameModule.topmost().navigate({ moduleName: "./views/party-list-page"});
 };
 var userId;
 el.Users.currentUser(function(data) {
@@ -27,6 +54,7 @@ el.Users.currentUser(function(data) {
 
     myParties.then(function(data) {
         for (var i = 0; i < data.length; i++) {
+            console.dir(data[i]);
             var party = {
                 Name: data[i][1]
             };

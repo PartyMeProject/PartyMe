@@ -4,6 +4,7 @@ var uiframe = require("ui/frame");
 var shouldReload = true;
 
 function pageLoaded(args) {
+
     var page = args.object;
     vmModule.partyListModel.isLoading = shouldReload;
     page.bindingContext = vmModule.partyListModel;
@@ -16,3 +17,10 @@ function pageLoaded(args) {
     }
 }
 exports.pageLoaded = pageLoaded;
+exports.delete = function(args) {
+    console.log('here');
+
+    var item = args.view.bindingContext;
+    console.dir(item);
+    vmModule.partyListModel.delete(item);
+};

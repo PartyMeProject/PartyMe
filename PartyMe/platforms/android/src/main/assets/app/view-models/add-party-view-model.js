@@ -15,7 +15,6 @@ var el = new Everlive({
 });
 var location = new textFieldModule.TextField();
 location.text = "ghghgh";
-
 AddPartyModel.addPartyLocation = function(){
     frameModule.topmost().navigate("./views/map-page")
 };
@@ -52,6 +51,6 @@ AddPartyModel.add = function () {
             alert(JSON.stringify(error));
             console.dir(error);
         });
-
+    frameModule.topmost().navigate("./views/my-parties-page")
 };
 exports.addPartyViewModel = AddPartyModel;

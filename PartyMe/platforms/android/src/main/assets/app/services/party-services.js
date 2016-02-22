@@ -27,9 +27,10 @@ var Parties = (function (_super) {
     };
 
     Parties.prototype.deleteDataFromTable = function (name) {
-        return global.db.all("delete from " + name + ";")
+
+        return global.db.all("delete from Party where name=?",[name])
             .then(function() {
-                console.log("Old data removed");
+                console.log("Item removed");
             }, function(err){
                 console.log(err);
             });

@@ -28,3 +28,6 @@ ActionBar {
     color: black;
     height: 40;
 }
+.delete{
+    height: 30;
+}

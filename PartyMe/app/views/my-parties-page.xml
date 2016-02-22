@@ -11,9 +11,9 @@
         <ActivityIndicator busy="{{ isLoading }}" verticalAlignment="center" horizontalAlignment="center"/>
         <ListView id="partiesList" items="{{ parties }}" >
             <ListView.itemTemplate>
-                <GridLayout rows="1*, 1*" cssClass="big">
+                <GridLayout rows="1*, 1*" cssClass="big" columns="*, auto">
                     <Label row="0" text="{{ $value.Name }}" />
-                    <Label id="id" visibility="collapsed" row="1" text="{{ $value.Id }}" />
+                    <Image src="~/images/DeleteRed.png" col="1" tap="delete" class="delete"/>
                 </GridLayout>
             </ListView.itemTemplate>
         </ListView>
