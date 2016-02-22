@@ -1,4 +1,5 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" >
     <Page.actionBar>
         <ActionBar title="Party Map" class="actionBar">
             <ActionBar.titleView>
@@ -8,14 +9,20 @@
             </ActionBar.titleView>
         </ActionBar>
     </Page.actionBar>
-    <StackLayout>
-        <Label text="Add Party" class="title"/>
 
-        <TextField hint="Name" id="name" text="{{ name }}" />
-        <TextField hint="Description" id="description" text="{{ description }}" />
-        <TextField hint="Latitude" id="latitude" text="{{ latitude }}" />
-        <TextField hint="Longitude" id="longitude" text="{{ longitude }}" />
+        <ScrollView>
+            <StackLayout orientation="vertical">
+            <Label text="Add Party" class="title"/>
 
-        <Button text="Add" tap="{{ add }}" />
-    </StackLayout>
+            <TextField hint="Name" id="name" text="{{ name }}" />
+            <TextField hint="Description" id="description" text="{{ description }}" />
+            <DatePicker day="23" month="2" year="2015" verticalAlignment="center" horizontalAlignment="center" id="date"/>
+            <TimePicker hour="18" minute="30" verticalAlignment="center" horizontalAlignment="center" id="time"/>
+            <TextField hint="Latitude" id="latitude" text="{{ latitude }}" />
+            <TextField hint="Longitude" id="longitude" text="{{ longitude }}" />
+
+            <Button text="Add" tap="{{ add }}"/>
+            </StackLayout>
+        </ScrollView>
+
 </Page>

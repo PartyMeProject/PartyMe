@@ -26,7 +26,6 @@ PartyListModel.delete = function(item) {
 
     var filter = new Everlive.Query();
     filter.where().eq('Name', item.Name);
-
     var dataItem = el.data('Party');
     dataItem.get(filter)
         .then(function(data){

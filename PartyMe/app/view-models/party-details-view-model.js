@@ -7,7 +7,6 @@ PartyDetailsModel.eventIt = function(name, location, date){
     date.setHours(0);
     date.setMinutes(0);
     date.setSeconds(0);
-
     var options = {
         title: name,
         startDate: new Date(date.getTime() + (60*60*1000)),

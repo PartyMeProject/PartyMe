@@ -4,8 +4,11 @@ var frameModule = require("ui/frame");
 var telerikBeckend = require("~/common/telerik-backend");
 var Everlive = require('~/everlive.all.min');
 var partyService = require("~/services/party-services");
-
+var datePickerModule = require("ui/date-picker");
 var textFieldModule = require("ui/text-field");
+var datePicker = new datePickerModule.DatePicker();
+var globalConstants = require("~/common/global-constants");
+
 var el = new Everlive({
     appId: telerikBeckend.ApiId,
     scheme: "https",
@@ -20,13 +23,15 @@ AddPartyModel.addPartyLocation = function(){
 };
 
 AddPartyModel.add = function () {
-
     var name = AddPartyModel.get("name");
     var description = AddPartyModel.get("description");
+    var date = globalConstants.DatePicker,
+        time = globalConstants.TimePicker;
 
-    latitude = AddPartyModel.get("latitude");
-    longitude = AddPartyModel.get("longitude");
-
+    var kendoDate = date.month + "/" + date.day + "/" + date.year + " " + time.hour + ":" + time.minute;
+    console.log(kendoDate);
+    var latitude = AddPartyModel.get("latitude");
+    var longitude = AddPartyModel.get("longitude");
     var userId;
     el.Users.currentUser(function(data) {
         userId = data.result.Id;
@@ -39,9 +44,10 @@ AddPartyModel.add = function () {
             'Name' : name,
             'Description' : description,
             'Location' : {
-                'Latitude': Number(latitude),
-                'Longitude': Number(longitude)
+                'latitude': Number(longitude),
+                'longitude': Number(latitude)
             },
+            'DueDate': kendoDate,
             'UserId':userId
         },
         function(data){
@@ -51,6 +57,7 @@ AddPartyModel.add = function () {
             alert(JSON.stringify(error));
             console.dir(error);
         });
+
     frameModule.topmost().navigate("./views/my-parties-page")
 };
 exports.addPartyViewModel = AddPartyModel;
