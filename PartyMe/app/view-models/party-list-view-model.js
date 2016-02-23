@@ -18,18 +18,28 @@ PartyListModel.addParty = function(){
 PartyListModel.myParties = function(){
     frameModule.topmost().navigate("./views/my-parties-page")
 };
-var data = el.data('Party');
-var query = new Everlive.Query();
-query.order('Name');
-data.get(query)
-    .then(function(data){
+PartyListModel.load = (function(){
+    var data = el.data('Party');
+    var query = new Everlive.Query();
+    query.order('Name');
+    data.get(query)
+        .then(function(data){
             PartyListModel.parties = data.result;
         },
         function(error){
             alert(JSON.stringify(error.message));
         });
+});
+
+PartyListModel.empty = function() {
+    while (PartyListModel.length) {
+
+        PartyListModel.pop();
+    }
+};
 
 PartyListModel.getPartyById = function(id, callback){
+    var data = el.data('Party');
     var query2 = new Everlive.Query();
     query2.where().eq('Id', id);
     data.get(query2)

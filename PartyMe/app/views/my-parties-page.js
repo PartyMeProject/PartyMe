@@ -1,6 +1,7 @@
 var vmModule = require("./../view-models/my-parties-view-model");
 var view = require("ui/core/view");
 var uiframe = require("ui/frame");
+var partyList = vmModule.partyListModel;
 var shouldReload = true;
 
 function pageLoaded(args) {
@@ -15,6 +16,8 @@ function pageLoaded(args) {
             uiframe.reloadPage();
         }, 2000);
     }
+    partyList.empty();
+    partyList.load();
 }
 exports.pageLoaded = pageLoaded;
 exports.delete = function(args) {

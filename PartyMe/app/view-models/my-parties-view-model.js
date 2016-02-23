@@ -27,48 +27,52 @@ PartyListModel.delete = function(item) {
 
     var filter = new Everlive.Query();
     filter.where().eq('Name', item.Name);
-    var dataItem = el.data('Party');
-    dataItem.get(filter)
+    var data = el.data('Party');
+    data.get(filter)
         .then(function(data){
-           dataItem.destroySingle({ Id: data.result[0].Id},
-                function(){
-
-                },
-                function(error){
-                    alert(JSON.stringify(error));
-                });
+            console.dir(data);
+            console.log('here');
+            console.log(data.result[0].Id);
+           //dataItem.destroySingle({ Id: data.result[0].Id},
+           //     function(){
+           //
+           //     },
+           //     function(error){
+           //         alert(JSON.stringify(error));
+           //     });
         },
         function(error){
-            alert(JSON.stringify(error));
+            //alert(JSON.stringify(error));
         });
-
-
     frameModule.topmost().navigate({ moduleName: "./views/party-list-page"});
 };
-var userId;
-el.Users.currentUser(function(data) {
-    userId = data.result.Id;
-    var myParties = partyService.Parties.getMyParties(userId);
+PartyListModel.load = function(){
+    var userId;
+    el.Users.currentUser(function(data) {
+        userId = data.result.Id;
+        var myParties = partyService.Parties.getMyParties(userId);
 
-    var myPartiesSQLiteResult = [];
+        var myPartiesSQLiteResult = [];
 
-    myParties.then(function(data) {
-        for (var i = 0; i < data.length; i++) {
-            console.dir(data[i]);
-            var party = {
-                Name: data[i][1]
-            };
-            myPartiesSQLiteResult.push(party);
-        }
+        myParties.then(function(data) {
+            for (var i = 0; i < data.length; i++) {
+                var party = {
+                    Name: data[i][1]
+                };
+                myPartiesSQLiteResult.push(party);
+            }
+        });
+        PartyListModel.parties = myPartiesSQLiteResult;
+
+    }, function(err) {
+        alert(err.message + " Please log in.");
     });
-    PartyListModel.parties = myPartiesSQLiteResult;
-    console.dir(PartyListModel.parties);
+};
 
-}, function(err) {
-    alert(err.message + " Please log in.");
-});
+PartyListModel.empty = function() {
+    while (PartyListModel.length) {
 
-
-
-
+        PartyListModel.pop();
+    }
+};
 exports.partyListModel = PartyListModel;

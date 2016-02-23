@@ -1,4 +1,6 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:PullRefresh="nativescript-pulltorefresh"
+      loaded="pageLoaded">
     <ActionBar title="Party Map" class="actionBar">
         <ActionBar.titleView>
             <StackLayout orientation="horizontal">
@@ -9,6 +11,7 @@
     </ActionBar>
     <StackLayout>
         <ActivityIndicator busy="{{ isLoading }}" verticalAlignment="center" horizontalAlignment="center"/>
+
         <ListView id="partiesList" items="{{ parties }}" >
             <ListView.itemTemplate>
                 <GridLayout rows="1*, 1*" cssClass="big">
@@ -17,5 +20,6 @@
                 </GridLayout>
             </ListView.itemTemplate>
         </ListView>
+
     </StackLayout>
 </Page>

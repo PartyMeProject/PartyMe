@@ -6,7 +6,6 @@ var Everlive = require('~/everlive.all.min');
 var partyService = require("~/services/party-services");
 var datePickerModule = require("ui/date-picker");
 var textFieldModule = require("ui/text-field");
-var datePicker = new datePickerModule.DatePicker();
 var globalConstants = require("~/common/global-constants");
 
 var el = new Everlive({
@@ -51,7 +50,7 @@ AddPartyModel.add = function () {
             'UserId':userId
         },
         function(data){
-            alert(JSON.stringify(data));
+            alert("Party Added");
         },
         function(error){
             alert(JSON.stringify(error));

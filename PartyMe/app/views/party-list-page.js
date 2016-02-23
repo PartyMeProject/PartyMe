@@ -1,10 +1,13 @@
 var vmModule = require("./../view-models/party-list-view-model");
+var partyList = vmModule.partyListModel;
 var view = require("ui/core/view");
 var uiframe = require("ui/frame");
 var shouldReload = true;
+var page;
+
 
 function pageLoaded(args) {
-    var page = args.object;
+    page = args.object;
     vmModule.partyListModel.isLoading = shouldReload;
     page.bindingContext = vmModule.partyListModel;
 
@@ -26,5 +29,8 @@ function pageLoaded(args) {
             });
         }
     });
+    partyList.empty();
+    partyList.load();
+
 }
 exports.pageLoaded = pageLoaded;

@@ -20,7 +20,6 @@ button {
 
 .big {
     font-size: 30px;
-    horizontal-align: center;
 }
 Page{
     background-image: url("~/images/background.jpg");

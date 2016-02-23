@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      "nativescript-pulltorefresh",
+      "D:\\Telerik Academy Courses\\NativeScript\\Project\\PartyMe\\PartyMe"
+    ]
+  ],
+  "_from": "nativescript-pulltorefresh@*",
+  "_id": "nativescript-pulltorefresh@0.1.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/nativescript-pulltorefresh",
+  "_nodeVersion": "4.2.1",
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/nativescript-pulltorefresh-0.1.0.tgz_1455920470530_0.6433348888531327"
+  },
+  "_npmUser": {
+    "email": "bradmartin0905@gmail.com",
+    "name": "bradmartin"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "nativescript-pulltorefresh",
+    "raw": "nativescript-pulltorefresh",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/nativescript-pulltorefresh/-/nativescript-pulltorefresh-0.1.0.tgz",
+  "_shasum": "42824506f27aad4796aeea6cfa3e0071dfbb0642",
+  "_shrinkwrap": null,
+  "_spec": "nativescript-pulltorefresh",
+  "_where": "D:\\Telerik Academy Courses\\NativeScript\\Project\\PartyMe\\PartyMe",
+  "author": {
+    "email": "bradwaynemartin@gmail.com",
+    "name": "Brad Martin",
+    "url": "https://github.com/bradmartin"
+  },
+  "bugs": {
+    "url": "https://github.com/bradmartin/nativescript-pulltorefresh/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nathanael Anderson",
+      "email": "nathan@master-technology",
+      "url": "https://github.com/nathanaela"
+    }
+  ],
+  "dependencies": {},
+  "description": "A NativeScript plugin to provide the Pull to Refresh control on any view.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "42824506f27aad4796aeea6cfa3e0071dfbb0642",
+    "tarball": "http://registry.npmjs.org/nativescript-pulltorefresh/-/nativescript-pulltorefresh-0.1.0.tgz"
+  },
+  "gitHead": "a79f76079e92989feb4036d570027b32f35430d4",
+  "homepage": "https://github.com/bradmartin/nativescript-pulltorefresh",
+  "keywords": [
+    "Material Design",
+    "NativeScript",
+    "Pull Refresh",
+    "SwipeRefreshLayout",
+    "Thorum",
+    "android",
+    "bradmartin",
+    "native",
+    "script"
+  ],
+  "license": "Apache-2.0",
+  "main": "pulltorefresh.js",
+  "maintainers": [
+    {
+      "name": "bradmartin",
+      "email": "bradmartin0905@gmail.com"
+    }
+  ],
+  "name": "nativescript-pulltorefresh",
+  "nativescript": {
+    "platforms": {
+      "android": "1.5.0"
+    }
+  },
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradmartin/nativescript-pulltorefresh.git"
+  },
+  "scripts": {},
+  "version": "0.1.0"
+}
